@@ -1,16 +1,15 @@
-## Next.js App Router Course - Starter
+## Next.js Dashboard
 
 Proyecto hecho siguiendo el tutorial de la pagina oficial nextjs.
 
--- EJECUTAR EL PORYECTO --
+## Ejecutar el proyecto
 pnpm dev
 
--- PUSH A GITHUB -->
-git add .
-git commit -m "Descripción de los cambios"
-git pull origin main --rebase (cogemos los cambios del repositorio)
-git push -u origin main (primera vez, resto de veces sin el -u)
+## Push a github
+git add .  
+git commit -m "Descripción de los cambios"  
+git pull origin main --rebase (cogemos los cambios del repositorio)  
+git push -u origin main (primera vez, resto de veces sin el -u)  
 
--- PULL A GITHUB -->
-
+## Pull de remoto a local
 git pull origin main
