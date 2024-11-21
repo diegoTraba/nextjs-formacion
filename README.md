@@ -2,7 +2,10 @@
 
 Proyecto hecho siguiendo el tutorial de la pagina oficial nextjs.
 
-#EJECUTAR EL PORYECTO
+-- EJECUTAR EL PORYECTO --
 pnpm dev
 
-#PUSH A GITHUB
+-- PUSH A GITHUB --
+
+-- PULL A GITHUB --
+git pull origin main
