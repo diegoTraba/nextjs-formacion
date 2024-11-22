@@ -15,11 +15,12 @@ const FormSchema = z.object({
   });
 
   //se omite la validacion de los campos id y date
-  const CreateInvoice = FormSchema.omit({ id: true, date: true });
+  const CreateInvoice = FormSchema.omit({date: true });
 
 export async function createInvoice(formData: FormData) {
     // const rawFormData = {
-    const { customerId, amount, status } = CreateInvoice.parse({
+    const { id, customerId, amount, status } = CreateInvoice.parse({
+        id: formData.get("id"),
         customerId: formData.get('customerId'),
         amount: formData.get('amount'),
         status: formData.get('status'),
