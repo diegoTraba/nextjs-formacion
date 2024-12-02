@@ -25,6 +25,7 @@ const links = [
 
 export default function NavLinks() {
   const pathname = usePathname();
+  
   // var RutaPrincipal=""
   // if(pathname.includes("invoices")){
   //   RutaPrincipal="invoices"
@@ -42,17 +43,35 @@ export default function NavLinks() {
         const routeParts= pathname.split('/');
         const lastPartRoute= routeParts[routeParts.length - 1];
         // Verificar si es ruta exacta o hija
-        const isActive =  pathname === link.href || pathname.startsWith(link.href + "/");
+        const isActive = (href: string) => {
+          
+          // Si la ruta actual es igual al href es una ruta padre
+          if (pathname === href) {
+            return true;
+          }
+          // Subrutas hijas de invoices y customers
+          if (pathname.startsWith(href) && pathname.length > href.length) {
+            if (href === '/dashboard/invoices' && pathname.startsWith('/dashboard/invoices')) {
+              return true;
+            }
+            if (href === '/dashboard/customers' && pathname.startsWith('/dashboard/customers')) {
+              return true;
+            }
+          }
+          return false;
+        };
+
         return (
           //link que tiene unas clases y si la ruta actual (pathname) termina igual que el href del enlace, se le añaden unas clases extra para destacar que en enlace se corresponde
           //con la ruta actual en la que nos encontramos
           <Link
+          
             key={link.name}
             href={link.href}
             className={clsx(
               'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-sky-100 text-blue-600': (pathname.endsWith(link.href)),
+                'bg-sky-100 text-blue-600': (isActive(link.href)),
               },
             )}
           >
