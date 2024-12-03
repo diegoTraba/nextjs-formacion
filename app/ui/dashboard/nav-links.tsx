@@ -45,7 +45,7 @@ export default function NavLinks() {
         // Verificar si es ruta exacta o hija
         const isActive = (href: string) => {
           
-          // Si la ruta actual es igual al href es una ruta padre
+          // Si la ruta actual es igual al href es una ruta exacta (http://localhost:3000/dashboard, http://localhost:3000/dashboard/invoices o http://localhost:3000/dashboard/customers)
           if (pathname === href) {
             return true;
           }
