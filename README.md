@@ -30,6 +30,14 @@ p
 - pnpm i -> Instala los paquetes del proyecto
 - pnpm dev -> Inicia el servidor de desarrollo
 
+## ESLint  
+ESLint se utiliza para ayudar a detectar problemas de accesibilidad de forma temprana. Advierte si tiene imágenes sin alttexto, utiliza los  atributos aria-* y  role de forma incorrecta, etc.  
+Para activarlo, solo hay que incluir el parametro en la seccion scripts de package.json de la siguente maneran: "lint": "next lint"  y a continuación, en la terminal escribimos pnpm lint y lo instalaremos. Una vez finalizada la instalacion, simplemente escribiremos en la terminal de visual studio pnpm lint y nos mostrara los errores. Si hacemos click en un error, nos llevara a la linea que está produciendo el error.
+
+## Errores comunes  
+Es posible que en la consola de Next.js aparezca el siguiente error: Failed to get source map: [Error: Unknown url scheme] { code: 'GenericFailure' }  
+Este error ocurre por culpa de una incidencia de NEXT 15 con turboPack. Normalmente sale cuando tienes la consola del navegador abierta y dejan de salir cuando la cierrras.  
+
 ## Push a github
 git add .  
 git commit -m "Descripción de los cambios"  
