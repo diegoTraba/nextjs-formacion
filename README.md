@@ -34,6 +34,11 @@ npx create-next-app@latest nextjs-dashboard --use-pnpm
 ESLint se utiliza para ayudar a detectar problemas de accesibilidad de forma temprana. Advierte si tiene imágenes sin alttexto, utiliza los  atributos aria-* y  role de forma incorrecta, etc.  
 Para activarlo, solo hay que incluir el parametro en la seccion scripts de package.json de la siguente maneran: "lint": "next lint"  y a continuación, en la terminal escribimos pnpm lint y lo instalaremos. Una vez finalizada la instalacion, simplemente escribiremos en la terminal de visual studio pnpm lint y nos mostrara los errores. Si hacemos click en un error, nos llevara a la linea que está produciendo el error.
 
+## NEXTAuth.js  
+Sirve para autenticar usuarios. simplifica el proceso de administrar sesiones, iniciar y cerrar sesion y otros aspectos de la autenticacion.  
+pnpm i next-auth@beta  
+https://generate-secret.vercel.app/32 -> generar clave secreta para la aplicacion y la guardaremos en .env
+
 ## Errores comunes  
 Es posible que en la consola de Next.js aparezca el siguiente error: Failed to get source map: [Error: Unknown url scheme] { code: 'GenericFailure' }  
 Este error ocurre por culpa de una incidencia de NEXT 15 con turboPack. Normalmente sale cuando tienes la consola del navegador abierta y dejan de salir cuando la cierrras.  
@@ -45,4 +50,11 @@ git pull origin main --rebase (cogemos los cambios del repositorio)
 git push -u origin main (primera vez, resto de veces sin el -u)  
 
 ## Pull de remoto a local
-git pull origin main
+git pull origin main  
+
+## Actualizar pnpm y dependencias  
+npm install -g pnpm -> instala o actualiza a la version mas reciente de pnpm  
+pnpm --version -> version de pnpm  
+pnpm outdated -> muestra las dependencias deprecadas
+pnpm update -> actualiza la version de todas las dependencias
+
