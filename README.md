@@ -20,7 +20,7 @@ npx create-next-app@latest nextjs-dashboard --use-pnpm
 - /app/lib -> Contiene funciones utilizadas en su aplicación, como funciones de utilidad reutilizables y funciones de obtención de datos.  
 - /app/ui -> Contiene todos los componentes de la interfaz de usuario para su aplicación, como tarjetas, tablas y formularios. Para ahorrar tiempo, hemos prediseñado estos componentes para usted.  
 - /public -> Contiene todos los activos estáticos para su aplicación, como imágenes.   
-p
+
 ## Ficheros especiales
 - /app/lib/definitions.ts -> Definimos los modelos que serán devueltos de la base de datos.  
 - /app/ui/global.css -> estilos generales del proyecto.  
