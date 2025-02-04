@@ -39,7 +39,7 @@ export default function NavLinks() {
       {links.map((link) => {
         const LinkIcon = link.icon;
         const routeParts= pathname.split('/');
-        const lastPartRoute= routeParts[routeParts.length - 1];
+        // const lastPartRoute= routeParts[routeParts.length - 1];
         // Verificar si es ruta exacta o hija
         const isActive = (href: string) => {
           
